@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "External Agents",
+    "description": "Discover and connect local external agents such as Codex and Cursor Agent over ACP/stdio."
+  }
+}

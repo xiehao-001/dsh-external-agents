@@ -1,0 +1,59 @@
+{
+  "name": "@eduwork/dsh-external-agents",
+  "version": "0.1.1",
+  "description": "Discover and connect local external agents such as Codex and Cursor Agent over ACP/stdio.",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MulanPSL-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./typert": "./lib/typert.js",
+    "./package.json": "./package.json",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/zh.json": "./locale/zh.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "MARKET.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=24.22.1",
+    "dsh": ">=0.2.1 <0.3.0"
+  },
+  "keywords": [
+    "agents",
+    "acp",
+    "codex",
+    "cursor"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-subagent-codex": ">=0.2.1-rc.5 <0.2.2-0 || >=0.2.2-rc.1 <0.2.3-0",
+    "@deepseek-ai/dsh-subagent-acp": ">=0.2.1-rc.5 <0.2.2-0 || >=0.2.2-rc.1 <0.2.3-0",
+    "zod": "^4.0.0",
+    "react": "^18.2.0",
+    "@deepseek-ai/dsh-tool-subagent": ">=0.2.1-rc.5 <0.3.0-0 || >=0.2.2-rc.1 <0.2.3-0",
+    "@deepseek-ai/dsh-storage-domain": ">=0.2.1-rc.5 <0.3.0-0 || >=0.2.2-rc.1 <0.2.3-0",
+    "@deepseek-ai/dsh-typert-protocol": ">=0.2.1-rc.5 <0.3.0-0 || >=0.2.2-rc.1 <0.2.3-0"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "1.4.0"
+  }
+}

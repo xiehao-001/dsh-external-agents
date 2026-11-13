@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "外部智能体接入",
+    "description": "发现并连接本机的 Codex、Cursor Agent 等外部智能体（ACP/stdio）。",
+    "detail": "在设置里检测、启用、停用外部智能体，也可手动添加支持 stdio 的 ACP 智能体；配套的官方 Codex/ACP Provider 必须与宿主 DSH 版本一致。"
+  }
+}
